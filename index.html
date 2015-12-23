@@ -8,12 +8,29 @@
   </head>
   <body>
     <a-scene>
+      <!--
       <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
       <a-cube position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1"  color="#4CC3D9"></a-cube>
       <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
       <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      -->
+
+      <a-image id="logo" src="https://scontent.xx.fbcdn.net/hphotos-xfp1/t31.0-8/11930988_10154088276211729_2432197377106462187_o.png" position="0 3.25 1"></a-image>
+      <a-entity id="menu-items" visible="false">
+        <a-image src="/img/photos.png" position="-1 2.1 0" height="0.5" width="0.5"></a-image>
+        <a-image src="/img/like.jpg" position="0 2.1 0" height="0.5" width="0.5"></a-image>
+        <a-image src="/img/checkins.jpg" position="1 2.1 0" height="0.5" width="0.5"></a-image>
+      </a-entity>
+      <a-camera position="0 1.8 4" cursor-visible="true" cursor-scale="2" cursor-color="#4CC3D9" cursor-offset="2" cursor-maxdistance="100" cursor-opacity="0.5"></a-camera>
+
 
       <a-sky color="#ECECEC"></a-sky>
     </a-scene>
   </body>
+
+  <script>
+    document.querySelector('#logo').addEventListener('click', function() {
+      document.querySelector('#menu-items').setAttribute("visible", "true");
+    });
+  </script>
 </html>

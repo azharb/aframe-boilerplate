@@ -17,5 +17,9 @@
     "aframe-example",
     "aframe-scene",
     "aframe-boilerplate"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/azharb/aframe-boilerplate.git"
+  }
 }
